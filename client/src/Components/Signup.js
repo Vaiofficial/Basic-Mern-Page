@@ -1,12 +1,102 @@
-import React from 'react'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBInput,
+  MDBIcon,
+  MDBCheckbox,
+} from "mdb-react-ui-kit";
 
 const Signup = () => {
   return (
     <div>
-        <p className='pt-5'>Welcome Guys</p>
-        <h1>We are MERN signup</h1>
-    </div>
-  )
-}
+      <>
+        <MDBContainer fluid>
+          <MDBCard className="text-black m-5" style={{ borderRadius: "25px" }}>
+            <MDBCardBody>
+              <MDBRow>
+                <MDBCol
+                  md="10"
+                  lg="6"
+                  className="order-2 order-lg-1 d-flex flex-column align-items-center"
+                >
+                  <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                    Sign up
+                  </p>
 
-export default Signup
+                  <div className="d-flex flex-row align-items-center mb-4 ">
+                    <MDBIcon fas icon="user me-3" size="lg" />
+                    <MDBInput
+                      label="Your Name"
+                      id="form1"
+                      type="text"
+                      className="w-100"
+                    />
+                  </div>
+
+                  <div className="d-flex flex-row align-items-center mb-4">
+                    <MDBIcon fas icon="envelope me-3" size="lg" />
+                    <MDBInput label="Your Email" id="form2" type="email" />
+                  </div>
+
+                  <div className="d-flex flex-row align-items-center mb-4">
+                    <MDBIcon fas icon="envelope me-3" size="lg" />
+                    <MDBInput label="Phone Number" id="form2" type="number" />
+                  </div>
+
+                  <div className="d-flex flex-row align-items-center mb-4">
+                    <MDBIcon fas icon="envelope me-3" size="lg" />
+                    <MDBInput label="Your Professional" id="form2" type="text" />
+                  </div>
+
+                  <div className="d-flex flex-row align-items-center mb-4">
+                    <MDBIcon fas icon="lock me-3" size="lg" />
+                    <MDBInput label="Password" id="password" type="password" />
+                  </div>
+
+                  <div className="d-flex flex-row align-items-center mb-4">
+                    <MDBIcon fas icon="key me-3" size="lg" />
+                    <MDBInput
+                      label="Repeat your password"
+                      id="cpassword"
+                      type="password"
+                    />
+                  </div>
+
+                  <div className="form-submit">
+                    <MDBBtn className="mb-4" size="lg">
+                      Register
+                    </MDBBtn>
+                  </div>
+
+                </MDBCol>
+
+                <MDBCol
+                  md="10"
+                  lg="6"
+                  className="order-1 order-lg-2 d-flex align-items-center"
+                >
+                  <MDBCardImage
+                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                    fluid
+                  />
+                </MDBCol>
+              </MDBRow>
+              <div className="text-center" style={{ marginTop: "20px", color: "black", textDecoration: "none" }}>
+                <NavLink to="/login" style={{ color: "green", textDecoration: "none", fontWeight:"bold"}}>I am already registered</NavLink>
+              </div>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBContainer>
+      </>
+    </div>
+  );
+};
+
+export default Signup;
