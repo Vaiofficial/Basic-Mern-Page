@@ -8,8 +8,8 @@ const Navbar = () => {
         <div>
             <>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <NavLink className="navbar-brand" to="#">
-                        Navbar
+                    <NavLink className="navbar-brand" to="#" > 
+                        Vaibhav Talks
                     </NavLink>
                     <button
                         className="navbar-toggler"
